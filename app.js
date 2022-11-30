@@ -11,7 +11,7 @@ const likedPostRouter = require("./routes/likedpost");
 app.use(express.json());
 
 app.use("/", express.urlencoded({ extended: false }), [
-    userRouter, postRouter, commentRouter, likedPostRouter
+    likedPostRouter, userRouter, postRouter, commentRouter
 ]);
 
 app.listen(port, () => {
